@@ -5,4 +5,4 @@ description: Get in touch with us.
 featured_image: /images/demo/demo-landscape.jpg
 ---
 
-Get in contact with us on [Instagram](https://instagram.com).
+Get in contact with us on [Instagram](https://www.instagram.com/cheltbmx/).
