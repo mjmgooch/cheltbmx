@@ -1,7 +1,7 @@
 ---
 title: About
 description: CheltBMX is a community of riders.
-subtitle: Setup in 2004, CheltBMX is the home of riders of BMX in Cheltenham.
+subtitle: Setup in 2004, CheltBMX is the home of BMX riders in Cheltenham.
 featured_image: /images/social.jpg
 ---
 

@@ -10,8 +10,10 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Home'
+    - title: 'Feed'
       url: '/'
+    - title: 'News'
+      url: '/news/'
     - title: 'About'
       url: '/about'
     - title: 'Contact'

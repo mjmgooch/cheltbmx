@@ -10,6 +10,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug
+  news:
+    output: true
+    permalink: /news/:slug
 
 defaults:
   -
@@ -32,9 +35,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "projects"
+      type: "news"
     values:
-      layout: "project"
+      layout: "news"
 
 markdown: kramdown
 

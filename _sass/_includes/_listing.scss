@@ -29,9 +29,10 @@
 }
 
 .listing-post__image {
-	margin-top: 20px;
+	margin-top: 30px;
 	display: block;
-	width: 100%;
+	margin: auto;
+	max-width: 1080px;
 	height: 0;
 	padding-bottom: 56.25%;
 	background-size: cover;

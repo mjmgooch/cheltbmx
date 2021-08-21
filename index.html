@@ -9,7 +9,29 @@ featured_image: /images/social.jpg
 
 	<div class="wrap">
 
-		{% for post in paginator.posts %}
+		<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+
+		<article class="listing-post">
+			<div id="instafeed"></div>
+		</article>
+
+		<script type="text/javascript">
+				fetch('${{ secrets.INSTANT_TOKENS_URL }}')
+				.then(resp => resp.json())
+				.then(data => {
+					const feed = new Instafeed({
+					accessToken: data.Token, // Access token from json response
+					//template: '<a class="listing-post__image" href="\{\{link\}\}"><img src="\{\{image\}\}" /></a>',
+					template: '<a href="\{\{link\}\}" class="listing-post__image" style="background-image: url(\{\{image\}\});"></a>',
+					});
+					feed.run();
+				})
+				.catch((error) => {
+					console.log(error)
+				});
+		</script>
+
+		<!-- {% for post in paginator.posts %}
 
 		<article class="listing-post">
 
@@ -29,13 +51,13 @@ featured_image: /images/social.jpg
 
 		</article>
 
-		{% endfor %}
+		{% endfor %} -->
 
 	</div>
 
 </section>
 
-{% if paginator.total_pages > 1 %}
+<!-- {% if paginator.total_pages > 1 %}
 
 <section class="pagination">
 
@@ -52,4 +74,4 @@ featured_image: /images/social.jpg
 
 </section>
 
-{% endif %}
+{% endif %} -->
