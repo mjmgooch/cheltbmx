@@ -16,7 +16,7 @@ featured_image: /images/social.jpg
 		</article>
 
 		<script type="text/javascript">
-				fetch('${{ secrets.INSTANT_TOKENS_URL }}')
+				fetch('{{ site.env.INSTANT_TOKENS_URL }}')
 				.then(resp => resp.json())
 				.then(data => {
 					const feed = new Instafeed({
