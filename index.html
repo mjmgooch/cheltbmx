@@ -16,12 +16,11 @@ featured_image: /images/social.jpg
 		</article>
 
 		<script type="text/javascript">
-				fetch('{{ site.env.INSTANT_TOKENS_URL }}')
+				fetch('https://ig.instant-tokens.com/users/62799705-73f9-467e-9e90-4d95a8140586/instagram/17841449335631852/token?userSecret=jnsy6lhsqlhh5kcs5q9sj')
 				.then(resp => resp.json())
 				.then(data => {
 					const feed = new Instafeed({
 					accessToken: data.Token, // Access token from json response
-					//template: '<a class="listing-post__image" href="\{\{link\}\}"><img src="\{\{image\}\}" /></a>',
 					template: '<a href="\{\{link\}\}" class="listing-post__image" style="background-image: url(\{\{image\}\});"></a>',
 					});
 					feed.run();
@@ -31,47 +30,6 @@ featured_image: /images/social.jpg
 				});
 		</script>
 
-		<!-- {% for post in paginator.posts %}
-
-		<article class="listing-post">
-
-			<div class="listing-post__header">
-				<h2 class="listing-post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-				<p class="listing-post__subtitle">{{ post.date | date_to_long_string }}</p>
-			</div>
-
-			{% if post.featured_image %}
-			<a href="{{ post.url | relative_url }}" class="listing-post__image" style="background-image: url({{ post.featured_image | relative_url }});"></a>
-			{% endif %}
-
-			<div class="listing-post__content">
-				<p>{{ post.excerpt }}</p>
-				<p><a href="{{ post.url | relative_url }}" class="button">Read More</a>
-			</div>
-
-		</article>
-
-		{% endfor %} -->
-
 	</div>
 
 </section>
-
-<!-- {% if paginator.total_pages > 1 %}
-
-<section class="pagination">
-
-	{% if paginator.previous_page %}
-	<div class="pagination__prev">
-		<a href="{{ paginator.previous_page_path | relative_url }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
-	</div>
-	{% endif %}
-	{% if paginator.next_page %}
-	<div class="pagination__next">
-		<a href="{{ paginator.next_page_path | relative_url }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	</div>
-	{% endif %}
-
-</section>
-
-{% endif %} -->
