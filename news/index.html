@@ -19,7 +19,7 @@ featured_image: /images/social.jpg
 			</div>
 
 			{% if news.featured_image %}
-			<a href="{{ news.url | relative_url }}" class="listing-post__image" style="max-width: 1080px; background-image: url({{ news.featured_image | relative_url }});"></a>
+			<a href="{{ news.url | relative_url }}" class="listing-post__image" style="background-image: url({{ news.featured_image | relative_url }});"></a>
 			{% endif %}
 
 			<div class="listing-post__content">
