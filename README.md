@@ -1,4 +1,4 @@
-# CheltBMX.co.uk
+# Cheltbmx.com
 
 CheltBMX is a simple github pages hosted blog running Jekyll. It's designed to be a community driven example of BMX riding in Cheltenham.
 
